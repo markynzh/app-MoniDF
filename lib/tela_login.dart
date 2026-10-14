@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'tema.dart'; // cores e LogoUnDF
+import 'tela_home.dart';
 
 //cor dos campos
 const Color azulCampo = Color(0xFF8FCBFF);
@@ -137,7 +138,12 @@ class _TelaLoginState extends State<TelaLogin> {
                 height: 56,
                 child: ElevatedButton(
                   onPressed: () {
-                    // TODO: validar e autenticar
+                    // TODO: validar e autenticar de verdade
+                    Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (_) => const TelaHome()),
+                    (route) => false,
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: azulPrincipal,
