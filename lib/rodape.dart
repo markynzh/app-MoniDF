@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'tema.dart';
-import 'tela_home.dart';
-import 'tela_perfil.dart';
+import 'telaHome.dart';
+import 'telaMonitor.dart';
+import 'telaAgendamentos.dart';
+import 'telaPerfil.dart';
+
 
 //barra de navegacao inferior, compartilhada pelas telas
 class Rodape extends StatelessWidget {
@@ -22,6 +25,8 @@ class Rodape extends StatelessWidget {
 
     final Widget? destino = switch (i) {
       0 => const TelaHome(),
+      2 => const TelaMonitor(),
+      3 => const TelaAgendamentos(),
       4 => const TelaPerfil(),
       _ => null, // TODO: demais telas
     };
